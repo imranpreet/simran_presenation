@@ -767,6 +767,17 @@ body.modal-open { overflow: hidden; }
 }
 
 @media (max-width: 760px) {
+	.slide[data-title="Company"], .zigguratss-slide {
+		overflow-y: auto;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		touch-action: pan-y;
+		overscroll-behavior-y: contain;
+	}
+	.slide[data-title="Company"] .experience-grid, .zigguratss-slide .project-showcase {
+		height: auto;
+		min-height: 0;
+	}
 	.reflection-slide { overflow-y: auto; }
 	.reflection-content, .project-detail-layout, .skills-layout, .challenge-layout, .takeaway-layout { grid-template-columns: 1fr; height: auto; gap: 24px; align-items: start; }
 	.reflection-slide .slide-heading h2 { font-size: 42px; }
@@ -833,4 +844,18 @@ body.modal-open { overflow: hidden; }
 	.apj-main-links { margin-top: 10px; }
 	.apj-gallery { gap: 4px; grid-template-rows: repeat(3, minmax(0, 1fr)); }
 	.apj-gallery figcaption { min-height: 0; font-size: 5px; padding: 3px 4px; }
+}
+
+@media (max-width: 760px) {
+	.zigguratss-slide {
+		overflow-y: auto;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		touch-action: pan-y;
+		overscroll-behavior-y: contain;
+	}
+	.zigguratss-slide .project-showcase {
+		height: auto;
+		min-height: 0;
+	}
 }
