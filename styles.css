@@ -897,3 +897,19 @@ body.modal-open { overflow: hidden; }
 	}
 	.portrait-caption { margin-top: 12px; }
 }
+
+@media (max-width: 760px) {
+	.barnyup-slide {
+		overflow-y: auto;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		touch-action: pan-y;
+		overscroll-behavior-y: contain;
+	}
+	.barnyup-slide .barnyup-layout {
+		height: auto;
+		min-height: 0;
+		margin-right: 0;
+		align-items: start;
+	}
+}
