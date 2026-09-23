@@ -810,8 +810,15 @@ body.modal-open { overflow: hidden; }
 .slide.is-active .apj-gallery { animation: projectCardReveal .5s ease both; animation-delay: .25s; }
 
 @media (max-width: 760px) {
+	.apj-project-slide {
+		overflow-y: auto;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		touch-action: pan-y;
+		overscroll-behavior-y: contain;
+	}
 	.apj-project-brand { right: -75px; font-size: 130px; }
-	.apj-project-layout { grid-template-columns: 1fr; height: auto; margin-right: 0; gap: 24px; align-items: start; }
+	.apj-project-layout { grid-template-columns: 1fr; height: auto; min-height: max-content; margin-right: 0; gap: 24px; align-items: start; }
 	.apj-project-slide .slide-heading h2 { font-size: 43px; }
 	.apj-description { font-size: 13px !important; }
 	.apj-logo-panel { height: 180px; }
